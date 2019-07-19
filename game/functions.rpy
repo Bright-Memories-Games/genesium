@@ -19,7 +19,7 @@
 
 init python:
 
-  ## Инициализация таймера обратного отсчета перед важным выбором.
+  ## Инициализация таймера обратного отсчета и его отображение перед важным выбором.
   ## Стырено из официальных рецептов, работает
 
   ## @param tm (целое или дробное число) - Время, через которое таймер скроется с экрана и произойдет переход по метке, указанной в timer_jump
@@ -42,6 +42,8 @@ init python:
     timer_time = tm
     timer_range = tmr
     timer_jump = tj
+    _window_hide()
+    renpy.call_screen(countdown)
 
 
   ## Описание анимации таймскипа (пропуск времени)
@@ -77,3 +79,38 @@ init python:
         if snd:
             renpy.music.stop("sound")
         _window_show()
+
+  ## Переключает новеллу в режим adv (стандартные реплики внизу экрана)
+  ## Стырено из Бесконечного лета, нужно проверить работоспособность
+
+  def set_mode_adv():
+        nvl_clear()
+        
+        global menu
+        menu = renpy.display_menu
+
+        ## Переопределяет определения Character для соответствующих режимов новеллы
+        
+        ## global store
+        ## for x in store.names_list:
+        ##     char_define(x)
+
+  ## Переключает новеллу в режим nvl (реплики на полный экран)
+  ## Стырено из Бесконечного лета, нужно проверить работоспособность
+
+  def set_mode_nvl():
+        nvl_clear()
+        
+        global menu
+        menu = nvl_menu
+        
+        global narrator
+        global th
+        narrator_nvl = narrator
+        th_nvl = th
+
+        ## Переопределяет определения Character для соответствующих режимов новеллы
+        
+        ## global store
+        ## for x in store.names_list:
+        ##     char_define(x,True)
