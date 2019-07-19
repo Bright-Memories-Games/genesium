@@ -1,3 +1,7 @@
 **/*.rpyc
 errors.txt
 traceback.txt
+game/saves/*.save
+game/saves/_reload-2-LT1.save
+game/saves/*.json
+game/saves/persistent
