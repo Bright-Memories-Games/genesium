@@ -1,2 +1,7 @@
 label start:
-  jump sam_prologue
+  "Выберите персонажа"
+  menu:
+    "Сэмюэль":
+      jump sam_prologue
+    "Джеймс Черношляп":
+      jump bh_prologue
