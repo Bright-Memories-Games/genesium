@@ -94,3 +94,15 @@ init python:
         nvl_clear()
         global menu
         menu = nvl_menu
+
+    def call_to_owl_like_bullshit():
+        """
+        Функция call_to_owl_like_bullshit нужна для перехода к сцене с совоподобной хренью
+        Параметры:
+            —
+        Источник: @dadyarri
+
+        """
+        if not renpy.seen_label('owl_like_bullshit'):
+            renpy.call('owl_like_bullshit')
+        return
