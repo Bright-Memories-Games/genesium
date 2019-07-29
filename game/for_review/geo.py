@@ -1,16 +1,19 @@
 class Geo:
-    def __init__(self, current_location):
+    def __init__(self, init_geo):
         self.locations = ['Albis', 'Hestir', 'Nox', 'Willaldan', 'Hostalikon', 'Galerenon', 'Fernlander']
-        self.current_location = current_location
-        self.default_location = current_location
+        self.current_geo = init_geo
+        self.default_geo = init_geo
 
     def current(self):
-        return self.current_location
+        return self.current_geo
 
     def reset(self):
-        self.current_location = self.default_location
+        self.current_geo = self.default_geo
 
-    def jump_to(self, new_location):
-        self.current_location = new_location
+    def jump_to(self, new_geo):
+        if new_geo in self.locations:
+            self.current_geo = new_geo
+        else:
+            return 1
 
 samuel = Geo('Hostalikon')
