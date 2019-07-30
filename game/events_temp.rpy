@@ -1,4 +1,4 @@
-init offset -2 python:
+init python:
 
     # Отработанные события:
 
@@ -101,11 +101,11 @@ init offset -2 python:
 
     good_rare_events = [
         {
-            "text": "Изобретено лекарство от Алеанис Фунгуса"
+            "text": "Изобретено лекарство от Алеанис Фунгуса",
             "influence": {
                 "event": "fungus_medicine",
             }
-        }
+        },
 
         {
             "text": "В деревне А не поделили сено для скота. Выжило только три семьи",
@@ -159,7 +159,7 @@ init offset -2 python:
 
     good_urare_events = [
         {
-            "text": "Выставка научных достижений в Альбисе"
+            "text": "Выставка научных достижений в Альбисе",
             "influence": {
                 "event": "albis_sci_exhib"
             }
