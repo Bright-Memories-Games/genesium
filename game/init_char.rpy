@@ -1,11 +1,11 @@
 init python:
     class Gameplay:
 
-        ## TODO: (@dadyarri) Добавить создание персонажа Ren'Py в класс Trait
-        ## (Добавить аргументы name, what_color, what_prefix, what_suffix, who_color)
-        ## Пример:
-        ## bh = Character(self.name, who_color=self.who_color, what_color=self.what_color, what_prefix=self.what_prefix, what_suffix=self.what_suffix)
-        ## Документация: https://www.renpy.org/doc/html/python.html#define-statement
+        def __init__(self, name, who_color, what_color, what_prefix, what_suffix, init_geo):
+            self.char = Character(name, who_color=who_color, what_color=what_color, what_prefix=what_prefix, what_suffix=what_suffix)
+
+            self.trait = self.Trait()
+            self.geo = self.Geo(init_geo)
 
         class Trait:
             def __init__(self, min_value, max_value, init_value):
