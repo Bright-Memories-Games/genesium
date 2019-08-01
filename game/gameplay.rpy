@@ -1,10 +1,9 @@
 init python:
-    class Gameplay:
+    class Hero:
 
         def __init__(self, name, who_color, what_color, what_prefix, what_suffix, init_geo):
             self.char = Character(name, who_color=who_color, what_color=what_color, what_prefix=what_prefix, what_suffix=what_suffix)
 
-            self.trait = self.Trait()
             self.geo = self.Geo(init_geo)
 
         class Trait:
