@@ -1,6 +1,8 @@
 # Root
 .vscode
-*.txt
+log.txt
+errors.txt
+traceback.txt
 
 # Saves
 game/saves/*.save
