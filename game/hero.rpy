@@ -64,7 +64,7 @@ init python:
                 ## Возвращает текущее значение параметра
                 return self.current_value
 
-            def more_than(self, value):
+            def greater_than(self, value):
 
                 ## Сравнивает выбранное значение с переданным (Если значение характеристики строго больше переданного, то возвращает True)
                 ## Использование:
@@ -75,7 +75,7 @@ init python:
                 else:
                     return False
 
-            def more_than_or_equal(self, value):
+            def greater_or_equal_than(self, value):
                 ## Сравнивает выбранное значение с переданным (Если значение характеристики не меньше переданного, то возвращает True)
                 ## Использование:
                 ## if sam.health.more_than_or_equal(30):
@@ -96,7 +96,7 @@ init python:
                 else:
                     return False
 
-            def less_then_or_equal(self, value):
+            def less_or_equal_than(self, value):
                 ## Сравнивает выбранное значение с переданным (Если значение характеристики не больше переданного, то возвращает True)
                 ## Использование:
                 ## if sam.health.less_than_or_equal(30):
