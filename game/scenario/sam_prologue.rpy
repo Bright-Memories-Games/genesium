@@ -1,10 +1,14 @@
 label sam_prologue:
-  ## сцена : что-нибудь заблюренное, возможно - поверх письмо.
   scene bg abandoned_church
-  "Давно я не получал вестей от своего отца"
-  "И вот — письмо:"
-  $ min_health, max_health, health = list(bh.health)
-  "«Здравствуй Сэмюэль. Как твои дела? {w} В последнее время мне сильно не здоровится, чувствую, мне осталось недолго. {w} Не мог бы ты приехать?» [health] / [max_health]"
+
+  ## Эксперименты с Traits
+  "Начальное значение здоровья [sam.health.current_value]"
+  $ sam.health.decrease(30)
+  "Здоровье: [sam.health.current_value]"
+  $ sam.health.increase(20)
+  "Здоровье: [sam.health.current_value]"
+
+  ## Переход между сценами с использованием эффекта моргания
   window hide
   show blink with dissolve
   pause(3)

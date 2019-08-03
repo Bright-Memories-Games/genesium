@@ -6,30 +6,18 @@
 ## Использование:
 ## dev "Какая-то реплика"
 
-## Мысли главного героя
+## Мысли главного героя (текст реплики окружен тильдами)
 define th = Character(None, what_prefix='~', what_suffix='~')
+
+## Рассказчик (текст реплики курсивом)
+
+define narrator = Character(None, what_prefix='{i}', what_suffix='{/i}')
 
 ## Джеймс Черношляп, главный герой основной арки
 init 1 python:
-  bh = Hero('Джеймс Черношляп', 'цвет_имени', 'цвет_текста', '', '', 'Nox')
-
-  bh.health = bh.Trait(0, 200, 180)
-  bh.trust = bh.Trait(-50, 50, 0)
-
-  bh.strength = bh.Trait(1, 10, 3)
-  bh.perception = bh.Trait(1, 10, 8)
-  bh.charisma = bh.Trait(1, 10, 6)
-  bh.luck = bh.Trait(1, 10, 4)
+  bh = Hero(name='Джеймс Черношляп', who_color='цвет_имени', what_color='цвет_текста', what_prefix='', what_suffix='', init_geo='Nox', traits={"health": [0, 100, 100], "trust": [-50, 50, 0], "strength": [1, 10, 3], "perception": [1, 10, 8], "charisma": [1, 10, 6], "luck": [1, 10, 4]})
 
 
 ## Сэмюэль, главный герой демо-версии
 
-  sam = Hero('Сэмюэль', 'цвет_имени', 'цвет_текста', '', '', 'Hostalikon')
-
-  sam.health = sam.Trait(0, 200, 100)
-  sam.trust = sam.Trait(-50, 50, 0)
-
-  sam.strength = sam.Trait(1, 10, 7)
-  sam.perception = sam.Trait(1, 10, 5)
-  sam.charisma = sam.Trait(1, 10, 4)  
-  sam.luck = sam.Trait(1, 10, 4)
+  sam = Hero(name='Сэмюэль', who_color='цвет_имени', what_color='цвет_текста', what_prefix='', what_suffix='', init_geo='Hostalikon', traits={"health": [0, 100, 100], "trust": [-50, 50, 0], "strength": [1, 10, 7], "perception": [1, 10, 5], "charisma": [1, 10, 4], "luck": [1, 10, 4]})
