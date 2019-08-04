@@ -106,3 +106,15 @@ init python:
         if not renpy.seen_label('owl_like_bullshit'):
             renpy.call('owl_like_bullshit')
         return
+
+    def flash(color="#fff", t=1.0, w=0):
+        """
+        Функция flash - это анимация перехода между сценами со вспышкой заданного цвета 
+        Параметры:
+            color (строка, содержащая цвет в шестнадцатеричном формате) - цвет вспышки
+            t (int, float) - продолжительность анимации
+            w (int, float) - хз, что это
+        Источник: Рецепты Ren'py
+
+        """
+        return Fade(t*.25, w, t*.75, color=color)
