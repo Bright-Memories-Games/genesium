@@ -1,5 +1,5 @@
 label sam_prologue:
-    scene bg abandoned_church
+    scene bg samuel house night
 
     show screen healthbar with dissolve
 
