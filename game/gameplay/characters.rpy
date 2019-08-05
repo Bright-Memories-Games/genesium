@@ -14,6 +14,8 @@ init 1 python:
     narrator = Character(None, what_prefix='{i}', what_suffix='{/i}')
 
     ## Джеймс Черношляп, главный герой основной арки
+    ## Использование:
+    ## bh.char "Реплика"
     bh = Hero(name='Джеймс Черношляп', who_color='#0414B4', what_color='#fff', what_prefix='', what_suffix='', init_loc='Nox', traits={"health": [0, 100, 100], "trust": [-50, 50, 0], "strength": [1, 10, 3], "perception": [1, 10, 8], "charisma": [1, 10, 6], "luck": [1, 10, 4]})
 
 

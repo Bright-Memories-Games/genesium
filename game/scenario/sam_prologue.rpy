@@ -4,15 +4,18 @@ label sam_prologue:
     show screen healthbar with dissolve
 
     ## Эксперименты с Traits
-    "Начальное значение здоровья [sam.health.current_value]"
+    sam.char "Начальное значение здоровья [sam.health.current_value]"
     $ sam.health.decrease(30)
-    "Здоровье: [sam.health.current_value]"
+    play music rain
+    play sound father_cough fadeout 1.0 fadein 0.5 
+    bh.char "Здоровье: [sam.health.current_value]"
     $ sam.health.increase(20)
     "Здоровье: [sam.health.current_value]"
     $ sam.health.increase(20)
     "Здоровье: [sam.health.current_value]"
     $ sam.health.decrease(50)
     "Здоровье: [sam.health.current_value]"
+    stop sound
   
     ## Интересный баг (или фича?) при перемотке сценария назад (через колесико мыши), 
     ## срабатывает повторное изменение здоровья.
@@ -22,7 +25,7 @@ label sam_prologue:
     hide screen healthbar with dissolve
     show blink with dissolve
     pause(1)
-    scene bg column_path_day behind blink
+    scene bg column path day behind blink
     hide blink
     show unblink
     pause(1.25)
