@@ -185,11 +185,12 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('game/**.rpy', None)
 
     ## Чтобы архивировать файлы, классифицируйте их, например, как 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/assets/**', 'archive')
+    build.classify('game/**.rpyc', 'archive')
 
     ## Файлы, соответствующие образцам документации, дублируются в приложениях
     ## Mac, чтобы они появлялись и в приложении, и в zip архиве.
