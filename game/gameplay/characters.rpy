@@ -1,7 +1,7 @@
 init 1 python:
     ## Файл для описания персонажей.
     ## Пример (для неигровых персонажей):
-    ## define dev = Character ('Чокнутный разработчик', color='#016361')
+    dev = Character ('Чокнутный разработчик', color='#016361')
     ## Документация по функции Character: https://renpy.org/doc/html/dialogue.html?highlight=character#Character
 
     ## Использование:
@@ -12,6 +12,9 @@ init 1 python:
 
     ## Рассказчик (текст реплики курсивом)
     narrator = Character(None, what_prefix='{i}', what_suffix='{/i}')
+
+    ## NPC (неигровые персонажи):
+    fath = Character('Отец', who_color='#FCCB2C', what_color='#fff')
 
     ## Джеймс Черношляп, главный герой основной арки
     ## Использование:
