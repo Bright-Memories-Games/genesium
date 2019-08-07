@@ -3,11 +3,15 @@
 log.txt
 errors.txt
 traceback.txt
+project.json
 
 # Saves
 game/saves/*.save
 game/saves/*.json
 game/saves/persistent
+
+# Translates
+game/tl/**/*.*
 
 # Global
 **/*.rpyc
